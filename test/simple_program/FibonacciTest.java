@@ -31,22 +31,21 @@ public class FibonacciTest {
     
     @Parameters
     public static Collection<Object[]> data() throws FileNotFoundException, IOException {
+        // get test data from data_fibonacci.csv
         CSVReader reader = new CSVReader(new FileReader("data_fibonacci.csv"));
         List myEntries = reader.readAll();
         return myEntries;
     }
-
     private int fInput;
-
     private int fExpected;
-
     public FibonacciTest(String input, String expected) {
+        // set test data
         fInput= Integer.parseInt(input);
         fExpected= Integer.parseInt(expected);
     }
-
     @Test
     public void test() {
+        // unit test
         assertEquals(fExpected, Fibonacci.compute(fInput));
     }
 }
