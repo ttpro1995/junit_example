@@ -16,7 +16,7 @@ public class Plus {
     }
     
     
-    public int result(int a, int b){
+    public int result(int a, int b){ // 3 and 4
         int r = 0;
         if (a > b) {
            r = a + b;
